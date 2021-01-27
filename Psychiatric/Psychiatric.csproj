@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3D9CF9BF-6FBB-49CA-AED4-CA80F8ECE9B4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Psychiatric</RootNamespace>
+    <AssemblyName>Psychiatric</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\memad\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>91E615973DB8F705E03CDEC713C3ECCF5DC0552F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Psychiatric_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addCustomer.Designer.cs">
+      <DependentUpon>addCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addDoctor.Designer.cs">
+      <DependentUpon>addDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addPlace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addPlace.Designer.cs">
+      <DependentUpon>addPlace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addSessionNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addSessionNumber.Designer.cs">
+      <DependentUpon>addSessionNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrystalForm.Designer.cs">
+      <DependentUpon>CrystalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customerReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>customerReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="customerSchedule-List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerSchedule-List.Designer.cs">
+      <DependentUpon>customerSchedule-List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customerSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerSchedule.Designer.cs">
+      <DependentUpon>customerSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dailyReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dailyReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DoctorReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DoctorReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DoctorSchedule-List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorSchedule-List.Designer.cs">
+      <DependentUpon>DoctorSchedule-List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="doctorSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="doctorSchedule.Designer.cs">
+      <DependentUpon>doctorSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listCustomers.Designer.cs">
+      <DependentUpon>listCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listDoctors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listDoctors.Designer.cs">
+      <DependentUpon>listDoctors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listPlaces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listPlaces.Designer.cs">
+      <DependentUpon>listPlaces.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listReservedCustomerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listReservedCustomerDetails.Designer.cs">
+      <DependentUpon>listReservedCustomerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listReservedCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listReservedCustomers.Designer.cs">
+      <DependentUpon>listReservedCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newReservation.Designer.cs">
+      <DependentUpon>newReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayCustomer.Designer.cs">
+      <DependentUpon>PayCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Database.cs" />
+    <Compile Include="sessionNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sessionNumber.Designer.cs">
+      <DependentUpon>sessionNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="showDailySchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="showDailySchedule.Designer.cs">
+      <DependentUpon>showDailySchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="showWeeklyschedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="showWeeklyschedule.Designer.cs">
+      <DependentUpon>showWeeklyschedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="weeklySchedule.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>weeklySchedule.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="addCustomer.resx">
+      <DependentUpon>addCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addDoctor.resx">
+      <DependentUpon>addDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addPlace.resx">
+      <DependentUpon>addPlace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addSessionNumber.resx">
+      <DependentUpon>addSessionNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalForm.resx">
+      <DependentUpon>CrystalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>customerReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerSchedule-List.resx">
+      <DependentUpon>customerSchedule-List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerSchedule.resx">
+      <DependentUpon>customerSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dailyReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dailyReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DoctorReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorSchedule-List.resx">
+      <DependentUpon>DoctorSchedule-List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doctorSchedule.resx">
+      <DependentUpon>doctorSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listCustomers.resx">
+      <DependentUpon>listCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listDoctors.resx">
+      <DependentUpon>listDoctors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listPlaces.resx">
+      <DependentUpon>listPlaces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listReservedCustomerDetails.resx">
+      <DependentUpon>listReservedCustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listReservedCustomers.resx">
+      <DependentUpon>listReservedCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newReservation.resx">
+      <DependentUpon>newReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomer.resx">
+      <DependentUpon>PayCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="sessionNumber.resx">
+      <DependentUpon>sessionNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="showDailySchedule.resx">
+      <DependentUpon>showDailySchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="showWeeklyschedule.resx">
+      <DependentUpon>showWeeklyschedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="weeklySchedule.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>weeklySchedule.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Psychiatric_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
